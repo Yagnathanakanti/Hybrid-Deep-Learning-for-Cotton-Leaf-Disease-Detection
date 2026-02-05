@@ -1,41 +1,51 @@
-# 📌 Crop Disease Detection System
+# 🌿 Cotton Leaf Disease Detection System
 
-This repository contains a **Crop Disease Detection System** built using machine learning and deep learning techniques. The goal of this project is to automatically detect and classify crop diseases from leaf images to support farmers and agricultural researchers in early diagnosis and better crop management.
+This repository contains a **Cotton Leaf Disease Detection System** that uses deep learning and computer vision techniques to automatically identify diseases in cotton leaves. The system helps farmers and agricultural researchers detect diseases early, which can prevent crop loss and improve yield quality.
 
 ---
 
 ## 🧠 Project Overview
 
-Crop diseases can significantly reduce agricultural yield, so building automated systems to detect disease symptoms can help prevent losses and improve food production. This project uses image classification and computer vision to identify various plant diseases from leaf images.
+Cotton plants are susceptible to several diseases that can significantly reduce yield if not detected early. This project leverages image classification to detect four major cotton leaf conditions from leaf images:
+
+1. **Bacterial Blight**  
+2. **Curl Virus**  
+3. **Fusarium Wilt**  
+4. **Healthy Leaves**
+
+By analyzing leaf images, the system classifies them into one of these four categories.
 
 ---
 
 ## 🛠 Features
 
-- Classifies healthy vs diseased crop leaves  
-- Uses deep learning models (e.g., CNNs)  
-- Works with real image datasets of crop diseases  
-- Easy to run locally or in Google Colab/Jupyter
+- Detects cotton leaf diseases automatically from images  
+- Classifies leaves into four categories  
+- Uses VGG16,ResNet50,DenseNet121 for feature extraction
+- Easy to run locally or in Google Colab
 
 ---
 
 ## 📦 Dataset
 
-We use publicly available crop disease datasets that include thousands of labeled images of crop leaves in different disease categories.
+The dataset used in this project is the **Cotton Leaf Disease Dataset** from Kaggle.  
 
-### 📍 Main Dataset: **KAGGLE DATASET**
-In this project we use the Cotton Leaf Disease dataset downloaded from Kaggle.
-This dataset contains real-world images of cotton leaves labeled into four classes:
+- Contains **1710 images** of cotton leaves captured in real-time and from internet sources  
+- Images are labeled into **four classes**: Bacterial Blight, Curl Virus, Fusarium Wilt, and Healthy Leaves  
+- Suitable for training deep learning models for disease classification
 
-Bacterial Blight
+**Implementation**
+- A hybrid deep learning + machine learning model.
+- Use Normalization and Resizing for preprocessing.
 
-Curl Virus
+- Combines VGG16, ResNet50, and DenseNet121 for feature extraction.
 
-Fusarium Wilt
+- Uses Logistic Regression, SVM, and Random Forest as classifiers.
 
-Healthy Leaves
+- Final decision made using Soft Voting Ensemble.
 
-There are a total of 1710 images in the dataset, captured both in real field conditions and from internet sources, making it suitable for training and evaluating deep learning models for cotton disease classification.
+- Performed 7 performance metrics accuracy,precision,recall,F1 score,FPR,Specificity,Support.
+
 
 📥 **Download link:**  
 https://www.kaggle.com/datasets/seroshkarim/cotton-leaf-disease-dataset
